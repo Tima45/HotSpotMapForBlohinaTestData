@@ -163,5 +163,9 @@ void MainWindow::on_checkBox_toggled(bool checked)
     colorMap->autoScaleData = checked;
 }
 
-
+void MainWindow::on_angleShiftBox_valueChanged(double arg1)
+{
+    colorMap->setAngle(arg1);
+    ui->plot->replot();
+}
 

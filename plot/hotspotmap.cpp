@@ -116,5 +116,21 @@ void HotSpotMap::calculateGausses(int stepsCount)
     }
 }
 
-
+void HotSpotMap::setAngle(double a)
+{
+    double aShift = a - currentAngle;
+    double aRad = aShift * M_PI / 180.0;
+    double cosA = cos(aRad);
+    double sinA = sin(aRad);
+    for(int i = 0; i < hotSpots.count(); i++){
+        double x = hotSpots.at(i).x;
+        double y = hotSpots.at(i).y;
+        double newX = x*cosA - y*sinA;
+        double newY = x*sinA + y*cosA;
+        hotSpots[i].x = newX;
+        hotSpots[i].y = newY;
+        hotSpotLabels[i]->position->setCoords(newX,newY);
+    }
+    currentAngle = a;
+}
 

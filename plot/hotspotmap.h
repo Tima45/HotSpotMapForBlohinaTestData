@@ -30,7 +30,7 @@ public:
     // TODO: void removeHotSpot() ???????
     void plotGauss();
     void calculateGausses(int stepsCount);
-
+    void setAngle(double a);
 
     Gauss2d currentGauss;
     Gauss2d minGauss;
@@ -47,8 +47,7 @@ private:
     QCPItemTracer * center;
     QCPCurve * historyCurve;
     int curveCounter = 0;
-
-
+    double currentAngle = 0;
 
 signals:
 
