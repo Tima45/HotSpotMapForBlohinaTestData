@@ -40,7 +40,7 @@ private slots:
 
     void on_angleShiftBox_valueChanged(double arg1);
 
-
+    void on_cleatButton_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -31,6 +31,7 @@ public:
     void plotGauss();
     void calculateGausses(int stepsCount);
     void setAngle(double a);
+    void clearHistory();
 
     Gauss2d currentGauss;
     Gauss2d minGauss;

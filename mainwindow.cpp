@@ -169,3 +169,9 @@ void MainWindow::on_angleShiftBox_valueChanged(double arg1)
     ui->plot->replot();
 }
 
+
+void MainWindow::on_cleatButton_clicked()
+{
+    colorMap->clearHistory();
+}
+

@@ -126,6 +126,13 @@
       </property>
      </widget>
     </item>
+    <item row="2" column="6">
+     <widget class="QPushButton" name="cleatButton">
+      <property name="text">
+       <string>clear history</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>

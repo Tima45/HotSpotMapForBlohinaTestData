@@ -134,3 +134,8 @@ void HotSpotMap::setAngle(double a)
     currentAngle = a;
 }
 
+void HotSpotMap::clearHistory()
+{
+    historyCurve->data()->clear();
+}
+
