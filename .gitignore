@@ -1,0 +1,13 @@
+# Папки сборки
+build/
+bin/
+
+
+# Qt Creator специфичные
+*.autosave
+
+# Qt Creator файлы
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+*.TMP
