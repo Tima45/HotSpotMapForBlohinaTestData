@@ -13,13 +13,15 @@ SOURCES += \
     mainwindow.cpp \
     plot/gauss2d.cpp \
     plot/hotspotmap.cpp \
-    plot/qcustomplot.cpp
+    plot/qcustomplot.cpp \
+    plot/qcpitemtextoutline.cpp
 
 HEADERS += \
     mainwindow.h \
     plot/gauss2d.h \
     plot/hotspotmap.h \
-    plot/qcustomplot.h
+    plot/qcustomplot.h \
+    plot/qcpitemtextoutline.h
 
 FORMS += \
     mainwindow.ui

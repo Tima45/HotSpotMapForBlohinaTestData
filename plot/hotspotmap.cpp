@@ -11,6 +11,9 @@ HotSpotMap::HotSpotMap(QCustomPlot *plot, Gauss2d startGauss, Gauss2d minGauss, 
 
     p.setColor(QColor(0,0,255,128));
     p.setWidth(2);
+
+
+
     currentGauss = startGauss;
     this->setInterpolate(false);
 
@@ -49,10 +52,16 @@ void HotSpotMap::setRanges(QCPRange xRange, QCPRange yRange)
 void HotSpotMap::addHotSpot(const HotSpot hs)
 {
     hotSpots.append(hs);
-    hotSpotLabels.append(new QCPItemText(this->parentPlot()));
+
+
+
+    hotSpotLabels.append(new QCPItemTextOutline(this->parentPlot()));
+    //hotSpotLabels.last()->setOutlinePen(QPen(QColor(Qt::black))));
     hotSpotLabels.last()->position->setCoords(hs.x,hs.y);
     hotSpotLabels.last()->setFont(f);
-    hotSpotLabels.last()->setColor(QColor(Qt::blue));
+    hotSpotLabels.last()->setColor(QColor(Qt::green));
+
+
 }
 
 void HotSpotMap::setTemperatureAt(int index, double t)

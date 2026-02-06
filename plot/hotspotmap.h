@@ -7,6 +7,7 @@
 #include <QDebug>
 #include "qcustomplot.h"
 #include "gauss2d.h"
+#include "qcpitemtextoutline.h"
 
 
 struct HotSpot{
@@ -41,9 +42,10 @@ private:
     double maxV = 0;
     double minV = 0;
     QList<HotSpot> hotSpots;
-    QList<QCPItemText*> hotSpotLabels;
+    QList<QCPItemTextOutline*> hotSpotLabels;
     QFont f;
     QPen p;
+
 
     QCPItemTracer * center;
     QCPCurve * historyCurve;
