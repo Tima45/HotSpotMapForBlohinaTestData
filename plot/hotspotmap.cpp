@@ -31,7 +31,7 @@ void HotSpotMap::rescaleReplot()
         this->setDataRange(QCPRange(minV,maxV));
 
     for(int i = 0; i < hotSpotLabels.count(); i++){
-        hotSpotLabels.at(i)->setText(QString::number(qRound(hotSpots.at(i).t*10.0)/10.0));
+        hotSpotLabels.at(i)->setText(QString::number(hotSpots.at(i).t,'f',1));
     }
 
     this->parentPlot()->replot();
